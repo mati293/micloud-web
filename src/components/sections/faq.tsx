@@ -17,9 +17,9 @@ export function Faq() {
       <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
-            04
+            08 · {t.faq.eyebrow}
           </p>
-          <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t.faq.title}
           </h2>
         </Reveal>
@@ -30,12 +30,12 @@ export function Faq() {
               <AccordionTrigger className="gap-4 text-left text-base font-semibold text-foreground">
                 <span className="flex gap-4">
                   <span className="pt-px font-mono text-xs font-normal text-muted-foreground">
-                    F.{String(index + 1).padStart(2, "0")}
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                   {item.q}
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="pl-11 leading-relaxed text-muted-foreground">
+              <AccordionContent className="pl-10 leading-relaxed text-muted-foreground">
                 {item.a}
               </AccordionContent>
             </AccordionItem>

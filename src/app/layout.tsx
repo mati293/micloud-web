@@ -23,9 +23,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mi Cloud | Soporte y Consultoría TI",
+  title: "MiCloud · Servicios administrados de TI para empresas | Uruguay y México",
   description:
-    "Mi Cloud es el General Contractor de TI para tu empresa: infraestructura, ciberseguridad, IA y desarrollo bajo un solo proveedor.",
+    "Un solo contrato para toda su operación tecnológica: infraestructura, ciberseguridad, aplicaciones y soporte. SLA publicado. Desde Zonamérica, Uruguay.",
 };
 
 export default function RootLayout({

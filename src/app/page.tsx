@@ -1,10 +1,13 @@
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Hero } from "@/components/sections/hero"
-import { Showcase } from "@/components/sections/showcase"
-import { About } from "@/components/sections/about"
-import { WhyUs } from "@/components/sections/why-us"
+import { Problem } from "@/components/sections/problem"
+import { Model } from "@/components/sections/model"
 import { Services } from "@/components/sections/services"
+import { Sla } from "@/components/sections/sla"
+import { Uruguay } from "@/components/sections/uruguay"
+import { About } from "@/components/sections/about"
+import { Steps } from "@/components/sections/steps"
 import { Faq } from "@/components/sections/faq"
 import { Contact } from "@/components/sections/contact"
 
@@ -14,10 +17,13 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
-        <Showcase />
-        <About />
-        <WhyUs />
+        <Problem />
+        <Model />
         <Services />
+        <Sla />
+        <Uruguay />
+        <About />
+        <Steps />
         <Faq />
         <Contact />
       </main>

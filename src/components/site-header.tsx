@@ -9,10 +9,11 @@ export function SiteHeader() {
   const { t } = useLanguage()
 
   const links = [
-    { href: "#quienes-somos", label: t.nav.about },
+    { href: "#modelo", label: t.nav.model },
     { href: "#servicios", label: t.nav.services },
+    { href: "#sla", label: t.nav.sla },
+    { href: "#nosotros", label: t.nav.about },
     { href: "#faq", label: t.nav.faq },
-    { href: "#contacto", label: t.nav.contact },
   ]
 
   return (
@@ -22,7 +23,7 @@ export function SiteHeader() {
           <Logo light className="text-xl sm:text-2xl" />
         </a>
 
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 lg:flex">
+        <nav className="hidden items-center gap-7 text-sm font-semibold text-white/85 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
