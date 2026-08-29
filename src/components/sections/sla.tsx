@@ -74,7 +74,7 @@ export function Sla() {
           </p>
 
           <a
-            href="#contacto"
+            href="/sla"
             className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--mc-blue)] underline-offset-4 hover:underline"
           >
             {t.sla.cta} →
