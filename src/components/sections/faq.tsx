@@ -17,7 +17,7 @@ export function Faq() {
       <div className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
         <Reveal>
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
-            08 · {t.faq.eyebrow}
+            06 · {t.faq.eyebrow}
           </p>
           <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t.faq.title}
@@ -25,7 +25,7 @@ export function Faq() {
         </Reveal>
 
         <Accordion className="mt-10" defaultValue={[0]}>
-          {t.faq.items.map((item, index) => (
+          {t.faq.items.slice(0, 4).map((item, index) => (
             <AccordionItem key={item.q} value={index} className="border-border">
               <AccordionTrigger className="gap-4 text-left text-base font-semibold text-foreground">
                 <span className="flex gap-4">

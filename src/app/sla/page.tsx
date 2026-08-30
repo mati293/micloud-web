@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/reveal"
 import { useLanguage } from "@/lib/i18n/language-provider"
 import { slaContent } from "@/lib/i18n/sla-content"
+import { withBase } from "@/lib/base"
 import { Clock, Radio, MessagesSquare, FileBarChart, ArrowLeft } from "lucide-react"
 
 const coverageIcons = [Clock, Radio, MessagesSquare, FileBarChart]
@@ -21,7 +22,7 @@ export default function SlaPage() {
         <section className="bg-[var(--mc-navy)]">
           <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6">
             <a
-              href="/"
+              href={withBase("/")}
               className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-white/60 transition-colors hover:text-white"
             >
               <ArrowLeft className="size-3.5" />
@@ -155,7 +156,7 @@ export default function SlaPage() {
               {c.ctaText}
             </p>
             <a
-              href="/#contacto"
+              href={withBase("/#contacto")}
               className="mt-8 inline-flex h-12 items-center rounded-full bg-[var(--mc-blue)] px-8 text-base font-semibold text-white transition-colors hover:bg-[#3dabe7]"
             >
               {c.cta}

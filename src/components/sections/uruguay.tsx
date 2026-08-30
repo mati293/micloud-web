@@ -2,47 +2,42 @@
 
 import { Reveal } from "@/components/reveal"
 import { useLanguage } from "@/lib/i18n/language-provider"
-import { Landmark, Clock, Cpu, Scale } from "lucide-react"
-import type { LucideIcon } from "lucide-react"
-
-const icons: LucideIcon[] = [Landmark, Clock, Cpu, Scale]
 
 export function Uruguay() {
   const { t } = useLanguage()
 
   return (
-    <section id="uruguay" className="border-t border-border">
+    <section id="uruguay" className="border-t border-border bg-card">
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
-        <Reveal className="max-w-2xl">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
-            05 · {t.uruguay.eyebrow}
-          </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {t.uruguay.title}
-          </h2>
-        </Reveal>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[20rem_1fr] lg:gap-16">
+          <Reveal className="lg:sticky lg:top-28 lg:self-start">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
+              05 · {t.uruguay.eyebrow}
+            </p>
+            <h2 className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl">
+              {t.uruguay.title}
+            </h2>
+          </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2">
-          {t.uruguay.items.map((item, index) => {
-            const Icon = icons[index % icons.length]
-            return (
-              <Reveal key={item.title} delay={(index % 2) * 0.08}>
-                <div className="flex gap-4">
-                  <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[var(--mc-navy)]/5 text-[var(--mc-navy)]">
-                    <Icon className="size-5" strokeWidth={1.7} />
+          <div>
+            {t.uruguay.items.map((item, index) => (
+              <Reveal key={item.title} delay={(index % 2) * 0.06}>
+                <div className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-border py-6 first:border-t-0 first:pt-0 sm:grid-cols-[3rem_1fr] sm:gap-6">
+                  <span className="font-mono text-sm text-muted-foreground">
+                    {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
                     <h3 className="font-heading text-lg font-semibold text-foreground">
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 max-w-md leading-relaxed text-muted-foreground">
+                    <p className="mt-2 max-w-xl leading-relaxed text-muted-foreground">
                       {item.body}
                     </p>
                   </div>
                 </div>
               </Reveal>
-            )
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>

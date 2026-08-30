@@ -142,3 +142,23 @@
     animation: none;
   }
 }
+
+/* ---- Design system utilities ---- */
+
+/* Blueprint grid — the "engineering spec / general contractor" motif */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklch, currentColor 8%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklch, currentColor 8%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.blueprint-grid-fade {
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 40%, #000 40%, transparent 100%);
+}
+
+/* Tabular figures for published numbers (SLA, metrics) */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}

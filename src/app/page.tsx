@@ -6,8 +6,6 @@ import { Model } from "@/components/sections/model"
 import { Services } from "@/components/sections/services"
 import { Sla } from "@/components/sections/sla"
 import { Uruguay } from "@/components/sections/uruguay"
-import { About } from "@/components/sections/about"
-import { Steps } from "@/components/sections/steps"
 import { Faq } from "@/components/sections/faq"
 import { Contact } from "@/components/sections/contact"
 
@@ -22,8 +20,6 @@ export default function Home() {
         <Services />
         <Sla />
         <Uruguay />
-        <About />
-        <Steps />
         <Faq />
         <Contact />
       </main>

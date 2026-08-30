@@ -3,6 +3,7 @@
 import { Logo } from "@/components/logo"
 import { LineNode } from "@/components/line-node"
 import { useLanguage } from "@/lib/i18n/language-provider"
+import { withBase } from "@/lib/base"
 
 export function SiteFooter() {
   const { t } = useLanguage()
@@ -44,7 +45,7 @@ export function SiteFooter() {
             © {year} {t.footer.company}. {t.footer.rights}
           </p>
           <p className="flex gap-4">
-            <a href="/privacidad" className="transition-colors hover:text-foreground">
+            <a href={withBase("/privacidad")} className="transition-colors hover:text-foreground">
               {t.footer.privacy}
             </a>
             <a

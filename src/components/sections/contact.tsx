@@ -51,7 +51,7 @@ export function Contact() {
           {/* left: intro + direct contact */}
           <Reveal>
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
-              09 · {t.contact.eyebrow}
+              07 · {t.contact.eyebrow}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t.contact.title}

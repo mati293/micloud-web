@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react"
 import { GlassCta } from "@/components/glass-cta"
 import { useLanguage } from "@/lib/i18n/language-provider"
+import { withBase } from "@/lib/base"
 
 export function Hero() {
   const { t } = useLanguage()
@@ -16,15 +17,20 @@ export function Hero() {
           loop
           playsInline
           preload="auto"
-          poster="/hero-poster.jpg"
+          poster={withBase("/hero-poster.jpg")}
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src={withBase("/hero-video.mp4")} type="video/mp4" />
         </video>
         {/* legibility overlay */}
         <div className="absolute inset-0 bg-[var(--mc-navy)]/70" />
         <div className="absolute inset-0 bg-gradient-to-br from-[#051320]/90 via-[#051320]/55 to-[#083459]/40" />
+        {/* engineering-spec grid, tying the hero to the SLA section */}
+        <div
+          aria-hidden="true"
+          className="blueprint-grid pointer-events-none absolute inset-0 text-white/40 opacity-40"
+        />
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pb-28 pt-32 sm:px-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">

@@ -6,18 +6,19 @@ import { Logo } from "@/components/logo"
 import { LanguageToggle } from "@/components/language-toggle"
 import { GlassCta } from "@/components/glass-cta"
 import { useLanguage } from "@/lib/i18n/language-provider"
+import { withBase } from "@/lib/base"
 import { cn } from "@/lib/utils"
 
 export function SiteHeader({ solid = false }: { solid?: boolean }) {
   const { t } = useLanguage()
   const [open, setOpen] = useState(false)
-  const base = solid ? "/" : ""
+  // On subpages, links go back to the home sections (with the deployment base).
+  const base = solid ? withBase("/") : ""
 
   const links = [
     { href: `${base}#modelo`, label: t.nav.model },
     { href: `${base}#servicios`, label: t.nav.services },
     { href: `${base}#sla`, label: t.nav.sla },
-    { href: `${base}#nosotros`, label: t.nav.about },
     { href: `${base}#faq`, label: t.nav.faq },
   ]
 
@@ -31,7 +32,7 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
       )}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <a href={solid ? "/" : "#top"} className="shrink-0">
+        <a href={solid ? withBase("/") : "#top"} className="shrink-0">
           <Logo light={!solid} className="text-xl sm:text-2xl" />
         </a>
 

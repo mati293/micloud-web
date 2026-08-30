@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { useLanguage } from "@/lib/i18n/language-provider"
 import { privacyContent } from "@/lib/i18n/privacy-content"
+import { withBase } from "@/lib/base"
 import { ArrowLeft } from "lucide-react"
 
 export default function PrivacyPage() {
@@ -16,7 +17,7 @@ export default function PrivacyPage() {
       <main className="flex-1">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
           <a
-            href="/"
+            href={withBase("/")}
             className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-[var(--mc-navy)]"
           >
             <ArrowLeft className="size-3.5" />
