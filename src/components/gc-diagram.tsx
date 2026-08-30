@@ -26,7 +26,7 @@ export function GcDiagram() {
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
       {/* ---- Antes ---- */}
-      <figure className="hairline rounded-2xl border border-border bg-card p-6">
+      <figure className="panel-sheen hairline rounded-2xl border border-border bg-card p-6">
         <figcaption className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           {d.before}
         </figcaption>
@@ -54,7 +54,7 @@ export function GcDiagram() {
       </figure>
 
       {/* ---- Con MiCloud ---- */}
-      <figure className="rounded-2xl border-2 border-[var(--mc-blue)]/30 bg-card p-6 glow-primary-soft">
+      <figure className="panel-sheen rounded-2xl border-2 border-[var(--mc-blue)]/30 bg-card p-6 glow-primary-soft">
         <figcaption className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
           {d.after}
         </figcaption>

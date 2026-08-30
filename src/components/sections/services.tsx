@@ -1,6 +1,7 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { AmbientGlow } from "@/components/ambient"
 import { useLanguage } from "@/lib/i18n/language-provider"
 import { ArrowUpRight } from "lucide-react"
 
@@ -8,8 +9,9 @@ export function Services() {
   const { t } = useLanguage()
 
   return (
-    <section id="servicios" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+    <section id="servicios" className="relative overflow-hidden border-t border-border">
+      <AmbientGlow className="right-[-10rem] bottom-[-6rem] size-[34rem] bg-[var(--mc-blue)]/7" />
+      <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <Reveal className="max-w-2xl">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
             03 · {t.services.eyebrow}
@@ -29,7 +31,7 @@ export function Services() {
             <Reveal key={service.name} delay={index * 0.08}>
               <a
                 href="#contacto"
-                className="lift hairline group flex h-full flex-col rounded-2xl border border-border bg-card p-7 hover:border-[var(--mc-blue)]/40 hover:shadow-[0_24px_60px_-28px_rgba(27,154,225,0.55)]"
+                className="panel-sheen lift hairline group flex h-full flex-col rounded-2xl border border-border bg-card p-7 hover:border-[var(--mc-blue)]/40 hover:shadow-[0_24px_60px_-28px_rgba(27,154,225,0.55)]"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-sm text-[var(--mc-blue)]">

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Reveal } from "@/components/reveal"
+import { AmbientGlow } from "@/components/ambient"
 import { useLanguage } from "@/lib/i18n/language-provider"
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react"
 
@@ -45,8 +46,9 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="border-t border-border bg-background">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+    <section id="contacto" className="relative overflow-hidden border-t border-border bg-background">
+      <AmbientGlow className="left-1/2 top-[-8rem] size-[36rem] -translate-x-1/2 bg-[var(--mc-blue)]/8" />
+      <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           {/* left: intro + direct contact */}
           <Reveal>
@@ -96,7 +98,7 @@ export function Contact() {
           <Reveal delay={0.1}>
             <form
               onSubmit={handleSubmit}
-              className="hairline rounded-2xl border border-border bg-card p-6 sm:p-8"
+              className="panel-sheen hairline rounded-2xl border border-border bg-card p-6 sm:p-8"
             >
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="space-y-1.5">

@@ -1,14 +1,16 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { AmbientGlow } from "@/components/ambient"
 import { useLanguage } from "@/lib/i18n/language-provider"
 
 export function Problem() {
   const { t } = useLanguage()
 
   return (
-    <section id="problema" className="border-t border-border bg-card">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+    <section id="problema" className="relative overflow-hidden border-t border-border bg-card">
+      <AmbientGlow className="right-[-8rem] top-[-6rem] size-[30rem] bg-[var(--mc-blue)]/8" />
+      <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <Reveal className="max-w-3xl">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
             01 · {t.problem.eyebrow}

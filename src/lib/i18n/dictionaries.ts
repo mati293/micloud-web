@@ -13,7 +13,7 @@ export const dictionaries = {
     },
     hero: {
       context: "Zonamérica, Uruguay · Operación en México",
-      stack: "Oracle · Azure · Microsoft 365 · Libra",
+      stack: "Oracle · Azure · Microsoft 365 · Libra · Primavera",
       headline1: "Un solo contrato. Un equipo.",
       headline2: "Toda su operación tecnológica.",
       subheadline:
@@ -273,7 +273,7 @@ export const dictionaries = {
     },
     hero: {
       context: "Zonamérica, Uruguay · Operating in Mexico",
-      stack: "Oracle · Azure · Microsoft 365 · Libra",
+      stack: "Oracle · Azure · Microsoft 365 · Libra · Primavera",
       headline1: "One contract. One team.",
       headline2: "Your entire technology operation.",
       subheadline:

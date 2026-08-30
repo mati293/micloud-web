@@ -2,14 +2,16 @@
 
 import { Reveal } from "@/components/reveal"
 import { GcDiagram } from "@/components/gc-diagram"
+import { AmbientGlow } from "@/components/ambient"
 import { useLanguage } from "@/lib/i18n/language-provider"
 
 export function Model() {
   const { t } = useLanguage()
 
   return (
-    <section id="modelo" className="border-t border-border">
-      <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+    <section id="modelo" className="relative overflow-hidden border-t border-border">
+      <AmbientGlow className="left-[-10rem] top-[20%] size-[34rem] bg-[var(--mc-blue)]/7" />
+      <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal className="lg:pt-4">
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">

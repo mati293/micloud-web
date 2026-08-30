@@ -7,6 +7,9 @@ import { withBase } from "@/lib/base"
 
 export function Hero() {
   const { t } = useLanguage()
+  const stackItems = t.hero.stack.split(" · ")
+  // one wide half; the track holds two identical halves so the -50% loop is seamless
+  const half = Array.from({ length: 4 }).flatMap(() => stackItems)
 
   return (
     <section id="top" className="relative">
@@ -62,11 +65,33 @@ export function Hero() {
             </a>
           </div>
 
-          {/* real context bar — no vanity counters */}
+          {/* animated tech-stack marquee (house style) */}
           <div className="mt-16 border-t border-white/15 pt-6">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-white/55">
-              {t.hero.stack}
-            </p>
+            <div
+              className="relative overflow-hidden"
+              style={{
+                maskImage:
+                  "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
+              }}
+            >
+              <div className="animate-marquee flex w-max">
+                {[0, 1].map((group) => (
+                  <div key={group} className="flex shrink-0" aria-hidden={group === 1}>
+                    {half.map((item, i) => (
+                      <span
+                        key={`${group}-${i}`}
+                        className="flex items-center whitespace-nowrap font-mono text-xs uppercase tracking-[0.18em] text-white/55"
+                      >
+                        <span className="mx-6">{item}</span>
+                        <span className="text-[var(--mc-blue)]/60">•</span>
+                      </span>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

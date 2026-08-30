@@ -232,6 +232,25 @@ button,
   letter-spacing: -0.03em;
 }
 
+/* Subtle diagonal sheen on panels so boxes read as glass, not flat */
+.panel-sheen {
+  position: relative;
+  isolation: isolate;
+}
+.panel-sheen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0) 42%
+  );
+  z-index: -1;
+}
+
 /* ---- Interactive panel: lift + border + glow on hover (house feel) ---- */
 .hover-panel {
   position: relative;
