@@ -29,7 +29,7 @@ export function Services() {
             <Reveal key={service.name} delay={index * 0.08}>
               <a
                 href="#contacto"
-                className="group flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--mc-blue)]/50 hover:shadow-[0_20px_50px_-25px_rgba(8,52,89,0.5)]"
+                className="lift hairline group flex h-full flex-col rounded-2xl border border-border bg-card p-7 hover:border-[var(--mc-blue)]/40 hover:shadow-[0_24px_60px_-28px_rgba(27,154,225,0.55)]"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-sm text-[var(--mc-blue)]">

@@ -31,6 +31,8 @@ export function Hero() {
           aria-hidden="true"
           className="blueprint-grid pointer-events-none absolute inset-0 text-white/40 opacity-40"
         />
+        {/* electric spotlight for depth */}
+        <div aria-hidden="true" className="spotlight pointer-events-none absolute inset-0" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pb-28 pt-32 sm:px-6">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70">

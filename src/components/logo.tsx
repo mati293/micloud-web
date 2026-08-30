@@ -14,7 +14,7 @@ export function Logo({
         className
       )}
     >
-      <span className={light ? "text-white" : "text-[var(--mc-navy)]"}>Mi</span>
+      <span className={light ? "text-white" : "text-foreground"}>Mi</span>
       <span className="text-[var(--mc-blue)]">Cloud</span>
     </span>
   )

@@ -83,7 +83,7 @@ export default function SlaPage() {
                             </span>
                           </span>
                         </td>
-                        <td className="py-4 pr-4 text-center font-heading text-lg font-semibold text-[var(--mc-navy)]">
+                        <td className="py-4 pr-4 text-center font-heading text-lg font-semibold text-[var(--mc-blue)]">
                           {row.r}
                         </td>
                         <td className="py-4 pr-4 text-center text-foreground">{row.res}</td>
@@ -113,7 +113,7 @@ export default function SlaPage() {
                 return (
                   <Reveal key={item.t} delay={(i % 2) * 0.08}>
                     <div className="flex gap-4">
-                      <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[var(--mc-navy)]/5 text-[var(--mc-navy)]">
+                      <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-[var(--mc-blue)]/10 text-[var(--mc-blue)]">
                         <Icon className="size-5" strokeWidth={1.7} />
                       </span>
                       <div>

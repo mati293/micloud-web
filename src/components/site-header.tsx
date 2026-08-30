@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Logo } from "@/components/logo"
 import { LanguageToggle } from "@/components/language-toggle"
@@ -12,8 +12,19 @@ import { cn } from "@/lib/utils"
 export function SiteHeader({ solid = false }: { solid?: boolean }) {
   const { t } = useLanguage()
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   // On subpages, links go back to the home sections (with the deployment base).
   const base = solid ? withBase("/") : ""
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  // Glass bar once the page is scrolled (or always, on solid subpages).
+  const glass = solid || scrolled
 
   const links = [
     { href: `${base}#modelo`, label: t.nav.model },
@@ -25,10 +36,11 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
   return (
     <header
       className={cn(
-        "z-50",
-        solid
-          ? "sticky top-0 border-b border-border bg-background/90 backdrop-blur"
-          : "absolute inset-x-0 top-0"
+        "z-50 transition-colors duration-500",
+        solid ? "sticky top-0" : "fixed inset-x-0 top-0",
+        glass
+          ? "border-b border-border bg-[var(--ground)]/80 backdrop-blur-xl"
+          : "border-b border-transparent"
       )}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -49,7 +61,7 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
               href={link.href}
               className={cn(
                 "transition-colors",
-                solid ? "hover:text-[var(--mc-navy)]" : "hover:text-white"
+                solid ? "hover:text-[var(--mc-blue)]" : "hover:text-white"
               )}
             >
               {link.label}
@@ -101,7 +113,7 @@ export function SiteHeader({ solid = false }: { solid?: boolean }) {
             <a
               href={`${base}#contacto`}
               onClick={() => setOpen(false)}
-              className="mt-3 inline-flex h-11 items-center justify-center rounded-full bg-[var(--mc-navy)] px-5 text-sm font-semibold text-white"
+              className="glow-primary mt-4 inline-flex h-11 items-center justify-center rounded-full bg-[var(--mc-blue)] px-5 text-sm font-semibold text-[var(--primary-foreground)]"
             >
               {t.nav.cta}
             </a>

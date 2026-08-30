@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
           <a
             href={withBase("/")}
-            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-[var(--mc-navy)]"
+            className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground transition-colors hover:text-[var(--mc-blue)]"
           >
             <ArrowLeft className="size-3.5" />
             {c.back}

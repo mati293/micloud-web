@@ -45,7 +45,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="border-t border-border bg-card">
+    <section id="contacto" className="border-t border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
           {/* left: intro + direct contact */}
@@ -65,18 +65,18 @@ export function Contact() {
                 href={`mailto:${CONTACT_EMAIL}`}
                 className="flex items-center gap-3 text-foreground transition-colors hover:text-[var(--mc-blue)]"
               >
-                <Mail className="size-4 text-[var(--mc-navy)]" />
+                <Mail className="size-4 text-[var(--mc-blue)]" />
                 {CONTACT_EMAIL}
               </a>
               <a
                 href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
                 className="flex items-center gap-3 text-foreground transition-colors hover:text-[var(--mc-blue)]"
               >
-                <Phone className="size-4 text-[var(--mc-navy)]" />
+                <Phone className="size-4 text-[var(--mc-blue)]" />
                 {CONTACT_PHONE}
               </a>
               <p className="flex items-start gap-3 text-muted-foreground">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-[var(--mc-navy)]" />
+                <MapPin className="mt-0.5 size-4 shrink-0 text-[var(--mc-blue)]" />
                 {t.footer.address}
               </p>
             </div>
@@ -96,7 +96,7 @@ export function Contact() {
           <Reveal delay={0.1}>
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-border bg-background p-6 shadow-sm sm:p-8"
+              className="hairline rounded-2xl border border-border bg-card p-6 sm:p-8"
             >
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="space-y-1.5">
@@ -151,19 +151,19 @@ export function Contact() {
               </div>
 
               <label className="mt-5 flex items-start gap-2.5 text-sm text-muted-foreground">
-                <input type="checkbox" name="consent" required className="mt-0.5 size-4 accent-[var(--mc-navy)]" />
+                <input type="checkbox" name="consent" required className="mt-0.5 size-4 accent-[var(--mc-blue)]" />
                 <span>{f.consent}</span>
               </label>
 
               <button
                 type="submit"
-                className="mt-6 inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-[var(--mc-navy)] px-6 text-base font-semibold text-white transition-colors hover:bg-[var(--mc-navy-light)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                className="glow-primary mt-6 inline-flex h-12 w-full cursor-pointer items-center justify-center rounded-full bg-[var(--mc-blue)] px-6 text-base font-semibold text-[var(--primary-foreground)] transition-colors hover:bg-[var(--mc-blue-bright)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
                 {f.submit}
               </button>
 
               {sent && (
-                <p className="mt-4 rounded-lg bg-[var(--mc-blue)]/10 px-4 py-3 text-center text-sm text-[var(--mc-navy)]">
+                <p className="mt-4 rounded-lg bg-[var(--mc-blue)]/10 px-4 py-3 text-center text-sm text-[var(--mc-blue)]">
                   {t.contact.success}
                 </p>
               )}

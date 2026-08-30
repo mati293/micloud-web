@@ -26,13 +26,13 @@ export function GcDiagram() {
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
       {/* ---- Antes ---- */}
-      <figure className="rounded-2xl border border-border bg-background p-6">
+      <figure className="hairline rounded-2xl border border-border bg-card p-6">
         <figcaption className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           {d.before}
         </figcaption>
 
         <div className="mt-5 flex flex-col items-center">
-          <div className="w-full rounded-lg border border-border bg-card px-4 py-3 text-center font-heading font-semibold text-foreground">
+          <div className="w-full rounded-lg border border-border bg-[var(--ground)] px-4 py-3 text-center font-heading font-semibold text-foreground">
             {d.client}
           </div>
           <Connector />
@@ -40,7 +40,7 @@ export function GcDiagram() {
             {d.vendors.map((v) => (
               <span
                 key={v}
-                className={`${vendorChip} border-border bg-card text-muted-foreground`}
+                className={`${vendorChip} border-border bg-[var(--ground)] text-muted-foreground`}
               >
                 {v}
               </span>
@@ -54,17 +54,17 @@ export function GcDiagram() {
       </figure>
 
       {/* ---- Con MiCloud ---- */}
-      <figure className="rounded-2xl border-2 border-[var(--mc-blue)]/30 bg-background p-6 shadow-sm">
+      <figure className="rounded-2xl border-2 border-[var(--mc-blue)]/30 bg-card p-6 glow-primary-soft">
         <figcaption className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
           {d.after}
         </figcaption>
 
         <div className="mt-5 flex flex-col items-center">
-          <div className="w-full rounded-lg border border-border bg-card px-4 py-3 text-center font-heading font-semibold text-foreground">
+          <div className="w-full rounded-lg border border-border bg-[var(--ground)] px-4 py-3 text-center font-heading font-semibold text-foreground">
             {d.client}
           </div>
           <Connector tone="brand" />
-          <div className="w-full rounded-lg bg-[var(--mc-navy)] px-4 py-3 text-center font-heading font-semibold text-white">
+          <div className="glow-primary w-full rounded-lg bg-[var(--mc-blue)] px-4 py-3 text-center font-heading font-semibold text-[var(--primary-foreground)]">
             MiCloud
           </div>
           <Connector tone="brand" />
@@ -80,7 +80,7 @@ export function GcDiagram() {
           </div>
         </div>
 
-        <p className="mt-5 text-center font-mono text-xs text-[var(--mc-navy)]">
+        <p className="mt-5 text-center font-mono text-xs text-[var(--mc-blue)]">
           {d.afterNote}
         </p>
       </figure>
