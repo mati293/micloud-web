@@ -13,7 +13,7 @@ export function Steps() {
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
             07 · {t.steps.eyebrow}
           </p>
-          <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="mt-3 font-heading fs-h2 font-bold text-balance text-foreground">
             {t.steps.title}
           </h2>
         </Reveal>

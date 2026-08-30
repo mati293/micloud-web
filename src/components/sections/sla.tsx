@@ -21,10 +21,10 @@ export function Sla() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
             04 · {t.sla.eyebrow}
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
+          <h2 className="mt-4 font-heading fs-h2 font-bold text-balance">
             {t.sla.title}
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-white/70">{t.sla.lead}</p>
+          <p className="mt-5 fs-lead text-pretty text-white/70">{t.sla.lead}</p>
         </Reveal>
 
         {/* the numbers — the signature */}
@@ -33,7 +33,7 @@ export function Sla() {
             <Reveal
               key={row.severity}
               delay={i * 0.07}
-              className="flex flex-col bg-[var(--mc-navy)] p-6"
+              className="group flex flex-col bg-[var(--mc-navy)] p-6 transition-colors duration-300 hover:bg-[#0d3157]"
             >
               <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-white/60">
                 <span
@@ -48,7 +48,7 @@ export function Sla() {
                 />
                 {row.severity}
               </div>
-              <div className="mt-6 font-heading text-4xl font-bold tabular tracking-tight lg:text-5xl">
+              <div className="mt-6 font-heading fs-num font-bold tabular">
                 {row.response}
               </div>
               <div className="mt-1 font-mono text-xs uppercase tracking-wide text-white/45">

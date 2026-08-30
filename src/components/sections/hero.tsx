@@ -39,13 +39,13 @@ export function Hero() {
             {t.hero.context}
           </p>
 
-          <h1 className="mt-6 max-w-4xl font-heading text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 max-w-4xl font-heading fs-display font-bold text-balance text-white">
             {t.hero.headline1}
             <br />
             <span className="text-white/90">{t.hero.headline2}</span>
           </h1>
 
-          <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">
+          <p className="mt-7 max-w-2xl fs-lead text-pretty text-white/80">
             {t.hero.subheadline}
           </p>
 

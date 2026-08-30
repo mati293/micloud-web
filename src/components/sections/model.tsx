@@ -15,7 +15,7 @@ export function Model() {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
               02 · {t.model.eyebrow}
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-3 font-heading fs-h2 font-bold text-balance text-foreground">
               {t.model.title}
             </h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">

@@ -205,3 +205,52 @@ button,
 .lift:hover {
   transform: translateY(-4px);
 }
+
+/* ---- Fluid, responsive type scale (clean desktop → mobile) ---- */
+.fs-display {
+  font-size: clamp(2.4rem, 1.25rem + 4.7vw, 4.75rem);
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+}
+.fs-h2 {
+  font-size: clamp(1.85rem, 1.2rem + 2.7vw, 3rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.fs-h3 {
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.fs-lead {
+  font-size: clamp(1.05rem, 0.97rem + 0.5vw, 1.3rem);
+  line-height: 1.6;
+}
+.fs-num {
+  font-size: clamp(2.6rem, 1.7rem + 3.4vw, 3.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+/* ---- Interactive panel: lift + border + glow on hover (house feel) ---- */
+.hover-panel {
+  position: relative;
+  transition: transform 0.45s var(--ease), border-color 0.45s var(--ease),
+    box-shadow 0.45s var(--ease), background-color 0.45s var(--ease);
+}
+.hover-panel:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in oklch, var(--mc-blue) 40%, transparent);
+  box-shadow: 0 26px 60px -30px rgba(27, 154, 225, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lift,
+  .hover-panel {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .lift:hover,
+  .hover-panel:hover {
+    transform: none;
+  }
+}

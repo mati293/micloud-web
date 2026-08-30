@@ -53,10 +53,10 @@ export function Contact() {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
               07 · {t.contact.eyebrow}
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-3 font-heading fs-h2 font-bold text-balance text-foreground">
               {t.contact.title}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-5 fs-lead text-pretty text-muted-foreground">
               {t.contact.subtitle}
             </p>
 

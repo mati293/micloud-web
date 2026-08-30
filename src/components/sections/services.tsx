@@ -14,10 +14,10 @@ export function Services() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
             03 · {t.services.eyebrow}
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
+          <h2 className="mt-4 font-heading fs-h2 font-bold text-balance text-foreground">
             {t.services.title}
           </h2>
-          <p className="mt-5 text-lg text-muted-foreground">{t.services.subtitle}</p>
+          <p className="mt-5 fs-lead text-pretty text-muted-foreground">{t.services.subtitle}</p>
         </Reveal>
 
         {/* Featured — the 3 entry points, as spec cards */}
@@ -55,11 +55,11 @@ export function Services() {
         <div className="mt-2">
           {t.services.more.map((service, index) => (
             <Reveal key={service.name} delay={(index % 5) * 0.05}>
-              <div className="grid grid-cols-[3rem_1fr] items-baseline gap-4 border-t border-border py-5 sm:grid-cols-[4rem_16rem_1fr] sm:gap-6">
-                <span className="font-mono text-sm text-muted-foreground">
+              <div className="group -mx-4 grid grid-cols-[3rem_1fr] items-baseline gap-4 rounded-lg border-t border-border px-4 py-5 transition-colors duration-300 hover:border-t-transparent hover:bg-[var(--panel-2)]/50 sm:grid-cols-[4rem_16rem_1fr] sm:gap-6">
+                <span className="font-mono text-sm text-muted-foreground transition-colors duration-300 group-hover:text-[var(--mc-blue)]">
                   S.{String(index + 4).padStart(2, "0")}
                 </span>
-                <h3 className="font-heading text-base font-semibold text-foreground">
+                <h3 className="font-heading text-base font-semibold text-foreground transition-colors duration-300 group-hover:text-[var(--mc-blue)]">
                   {service.name}
                 </h3>
                 <p className="col-span-2 text-sm leading-relaxed text-muted-foreground sm:col-span-1">

@@ -14,7 +14,7 @@ export function Uruguay() {
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
               05 · {t.uruguay.eyebrow}
             </p>
-            <h2 className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-4 font-heading fs-h2 font-bold text-balance text-foreground">
               {t.uruguay.title}
             </h2>
           </Reveal>
@@ -22,12 +22,12 @@ export function Uruguay() {
           <div>
             {t.uruguay.items.map((item, index) => (
               <Reveal key={item.title} delay={(index % 2) * 0.06}>
-                <div className="grid grid-cols-[2.5rem_1fr] gap-4 border-t border-border py-6 first:border-t-0 first:pt-0 sm:grid-cols-[3rem_1fr] sm:gap-6">
-                  <span className="font-mono text-sm text-muted-foreground">
+                <div className="group grid grid-cols-[2.5rem_1fr] gap-4 border-t border-border py-6 transition-colors duration-300 first:border-t-0 first:pt-0 hover:border-[var(--mc-blue)]/40 sm:grid-cols-[3rem_1fr] sm:gap-6">
+                  <span className="font-mono text-sm text-muted-foreground transition-colors duration-300 group-hover:text-[var(--mc-blue)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-foreground">
+                    <h3 className="font-heading fs-h3 font-semibold text-foreground">
                       {item.title}
                     </h3>
                     <p className="mt-2 max-w-xl leading-relaxed text-muted-foreground">

@@ -13,10 +13,10 @@ export function Problem() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--mc-blue)]">
             01 · {t.problem.eyebrow}
           </p>
-          <h2 className="mt-4 font-heading text-3xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl">
+          <h2 className="mt-4 font-heading fs-h2 font-bold text-balance text-foreground">
             {t.problem.title}
           </h2>
-          <p className="mt-6 max-w-2xl text-xl leading-relaxed text-foreground/70">
+          <p className="mt-6 max-w-2xl fs-lead text-pretty text-foreground/70">
             {t.problem.lead}
           </p>
         </Reveal>
@@ -26,15 +26,15 @@ export function Problem() {
             <Reveal
               key={item.title}
               delay={(index % 2) * 0.08}
-              className="bg-card p-7 sm:p-8"
+              className="group bg-card p-7 transition-colors duration-300 hover:bg-[var(--panel-2)] sm:p-8"
             >
-              <span className="font-mono text-sm text-[var(--mc-blue)]">
+              <span className="font-mono text-sm text-[var(--mc-blue)] transition-opacity duration-300 group-hover:opacity-100">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 font-heading text-xl font-semibold text-foreground">
+              <h3 className="mt-4 font-heading fs-h3 font-semibold text-foreground">
                 {item.title}
               </h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
+              <p className="mt-2 leading-relaxed text-muted-foreground text-pretty">
                 {item.body}
               </p>
             </Reveal>

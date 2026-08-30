@@ -15,10 +15,10 @@ export function About() {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--mc-blue)]">
               06 · {t.about.eyebrow}
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <h2 className="mt-3 font-heading fs-h2 font-bold text-balance text-foreground">
               {t.about.title}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-foreground/85">
+            <p className="mt-5 fs-lead text-pretty text-foreground/85">
               {t.about.body1}
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
