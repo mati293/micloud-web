@@ -1,0 +1,4 @@
+:HL["/micloud-web/_next/static/chunks/0t7ymyn75ujyg.css","style"]
+:HL["/micloud-web/_next/static/media/75affa71d1e2f6a7-s.p.17-aodiw50953.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/micloud-web/_next/static/media/c47649aa31f9e140-s.p.3lxpqujs87tck.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"zsmbuReNygXSXFjykl9YD"}

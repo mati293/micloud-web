@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[47257,["/micloud-web/_next/static/chunks/3fj2zus82ook6.js","/micloud-web/_next/static/chunks/158myu8e_yme3.js"],"ClientPageRoot"]
+3:I[82136,["/micloud-web/_next/static/chunks/3fj2zus82ook6.js","/micloud-web/_next/static/chunks/158myu8e_yme3.js","/micloud-web/_next/static/chunks/1gcj_w-j6g_1a.js","/micloud-web/_next/static/chunks/0l3dg74z_laho.js","/micloud-web/_next/static/chunks/06vk88a01j46b.js"],"default"]
+6:I[97367,["/micloud-web/_next/static/chunks/3fj2zus82ook6.js","/micloud-web/_next/static/chunks/158myu8e_yme3.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/micloud-web/_next/static/chunks/1gcj_w-j6g_1a.js","async":true}],["$","script","script-1",{"src":"/micloud-web/_next/static/chunks/0l3dg74z_laho.js","async":true}],["$","script","script-2",{"src":"/micloud-web/_next/static/chunks/06vk88a01j46b.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"zsmbuReNygXSXFjykl9YD"}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
